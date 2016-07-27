@@ -4,7 +4,6 @@ class CreateEmpleados < ActiveRecord::Migration
       t.text :name
       t.integer :age
       t.string :rut
-
       t.timestamps null: false
     end
   end

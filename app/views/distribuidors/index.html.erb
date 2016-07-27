@@ -29,7 +29,7 @@
         <td><%= distribuidor.Descripcion %></td>
         <td><%= link_to 'Mostrar', distribuidor %></td>
         <td><%= link_to 'Editar', edit_distribuidor_path(distribuidor) %></td>
-        <td><%= link_to 'Eliminar', distribuidor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', distribuidor, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +39,4 @@
 
 <br>
 
-<%= link_to 'Agregar distribuidor', new_distribuidor_path %>
+<%= link_to 'Agregar distribuidor', new_distribuidor_path, class:'btn btn-lg btn-info'%>
