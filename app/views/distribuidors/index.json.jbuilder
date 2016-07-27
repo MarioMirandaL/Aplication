@@ -1,0 +1,1 @@
+json.array! @distribuidors, partial: 'distribuidors/distribuidor', as: :distribuidor

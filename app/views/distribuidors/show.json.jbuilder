@@ -1,0 +1,1 @@
+json.partial! "distribuidors/distribuidor", distribuidor: @distribuidor

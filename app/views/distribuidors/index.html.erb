@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de distribuidores</h1>
+<br>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Nombre &nbsp;</th>
+      <th>Razon social &nbsp;</th>
+      <th>Rut &nbsp;</th>
+      <th>Mail &nbsp;</th>
+      <th>Telefono &nbsp;</th>
+      <th>Ubicacion &nbsp;</th>
+      <th>Descripcion &nbsp;</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distribuidors.each do |distribuidor| %>
+      <tr>
+        <td><%= distribuidor.Nombre %></td>
+        <td><%= distribuidor.razonsocial %></td>
+        <td><%= distribuidor.Rut %></td>
+        <td><%= distribuidor.Mail %></td>
+        <td><%= distribuidor.Telefono %></td>
+        <td><%= distribuidor.Ubicacion %></td>
+        <td><%= distribuidor.Descripcion %></td>
+        <td><%= link_to 'Mostrar', distribuidor %></td>
+        <td><%= link_to 'Editar', edit_distribuidor_path(distribuidor) %></td>
+        <td><%= link_to 'Eliminar', distribuidor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<br>
+
+<%= link_to 'Agregar distribuidor', new_distribuidor_path %>

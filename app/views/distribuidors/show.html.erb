@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @distribuidor.Nombre %>
+</p>
+
+<p>
+  <strong>Razonsocial:</strong>
+  <%= @distribuidor.razonsocial %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @distribuidor.Rut %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @distribuidor.Mail %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @distribuidor.Telefono %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @distribuidor.Ubicacion %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @distribuidor.Descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_distribuidor_path(@distribuidor) %> |
+<%= link_to 'Volver', distribuidors_path %>
