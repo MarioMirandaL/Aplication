@@ -70,6 +70,6 @@ class ProductosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def producto_params
-      params.require(:producto).permit(:name, :cantidad, :precio, :descripcion)
+      params.require(:producto).permit(:name, :cantidad, :precio, :descripcion, :unidadmedida)
     end
 end

@@ -35,5 +35,10 @@
   <%= @distribuidor.Descripcion %>
 </p>
 
-<%= link_to 'Editar', edit_distribuidor_path(@distribuidor) %> |
-<%= link_to 'Volver', distribuidors_path %>
+<p>
+  <strong>Productos:</strong>
+  <%= @distribuidor.productos %>
+</p>
+
+<%= link_to 'Edit', edit_distribuidor_path(@distribuidor) %> |
+<%= link_to 'Back', distribuidors_path %>

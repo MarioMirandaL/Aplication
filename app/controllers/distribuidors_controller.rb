@@ -1,5 +1,4 @@
 class DistribuidorsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_distribuidor, only: [:show, :edit, :update, :destroy]
 
   # GET /distribuidors
@@ -70,6 +69,6 @@ class DistribuidorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def distribuidor_params
-      params.require(:distribuidor).permit(:Nombre, :razonsocial, :Rut, :Mail, :Telefono, :Ubicacion, :Descripcion)
+      params.require(:distribuidor).permit(:Nombre, :razonsocial, :Rut, :Mail, :Telefono, :Ubicacion, :Descripcion, :productos)
     end
 end

@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre:</strong>
+  <strong>Name:</strong>
   <%= @producto.name %>
 </p>
 
 <p>
-  <strong>Cantidad (Kg):</strong>
+  <strong>Cantidad:</strong>
   <%= @producto.cantidad %>
 </p>
 
@@ -20,5 +20,10 @@
   <%= @producto.descripcion %>
 </p>
 
-<%= link_to 'Editar', edit_producto_path(@producto) %> |
-<%= link_to 'Volver', productos_path %>
+<p>
+  <strong>Unidadmedida:</strong>
+  <%= @producto.unidadmedida %>
+</p>
+
+<%= link_to 'Edit', edit_producto_path(@producto) %> |
+<%= link_to 'Back', productos_path %>

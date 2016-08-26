@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre:</strong>
+  <strong>Name:</strong>
   <%= @empleado.name %>
 </p>
 
@@ -15,5 +15,25 @@
   <%= @empleado.rut %>
 </p>
 
-<%= link_to 'Editar', edit_empleado_path(@empleado) %> |
-<%= link_to 'Volver', empleados_path %>
+<p>
+  <strong>Sueldo:</strong>
+  <%= @empleado.sueldo %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @empleado.email %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @empleado.telefono %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @empleado.cargo %>
+</p>
+
+<%= link_to 'Edit', edit_empleado_path(@empleado) %> |
+<%= link_to 'Back', empleados_path %>

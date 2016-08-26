@@ -18,7 +18,7 @@ class EmpleadosControllerTest < ActionController::TestCase
 
   test "should create empleado" do
     assert_difference('Empleado.count') do
-      post :create, empleado: { age: @empleado.age, name: @empleado.name, rut: @empleado.rut }
+      post :create, empleado: { age: @empleado.age, cargo: @empleado.cargo, email: @empleado.email, name: @empleado.name, rut: @empleado.rut, sueldo: @empleado.sueldo, telefono: @empleado.telefono }
     end
 
     assert_redirected_to empleado_path(assigns(:empleado))
@@ -35,7 +35,7 @@ class EmpleadosControllerTest < ActionController::TestCase
   end
 
   test "should update empleado" do
-    patch :update, id: @empleado, empleado: { age: @empleado.age, name: @empleado.name, rut: @empleado.rut }
+    patch :update, id: @empleado, empleado: { age: @empleado.age, cargo: @empleado.cargo, email: @empleado.email, name: @empleado.name, rut: @empleado.rut, sueldo: @empleado.sueldo, telefono: @empleado.telefono }
     assert_redirected_to empleado_path(assigns(:empleado))
   end
 

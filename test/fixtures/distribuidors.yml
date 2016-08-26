@@ -8,6 +8,7 @@ one:
   Telefono: MyString
   Ubicacion: MyString
   Descripcion: MyText
+  productos: MyText
 
 two:
   Nombre: MyString
@@ -17,3 +18,4 @@ two:
   Telefono: MyString
   Ubicacion: MyString
   Descripcion: MyText
+  productos: MyText

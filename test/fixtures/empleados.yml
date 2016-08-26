@@ -4,8 +4,16 @@ one:
   name: MyText
   age: 1
   rut: MyString
+  sueldo: 1
+  email: MyText
+  telefono: MyString
+  cargo: MyText
 
 two:
   name: MyText
   age: 1
   rut: MyString
+  sueldo: 1
+  email: MyText
+  telefono: MyString
+  cargo: MyText

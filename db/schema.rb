@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726005432) do
+ActiveRecord::Schema.define(version: 20160826041208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "compras", force: :cascade do |t|
+    t.integer  "producto_id"
+    t.integer  "distribuidor_id"
+    t.date     "fecha_compra"
+    t.date     "fecha_entrega"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "compras", ["distribuidor_id"], name: "index_compras_on_distribuidor_id", using: :btree
+  add_index "compras", ["producto_id"], name: "index_compras_on_producto_id", using: :btree
 
   create_table "distribuidors", force: :cascade do |t|
     t.string   "Nombre"
@@ -26,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160726005432) do
     t.text     "Descripcion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.text     "productos"
   end
 
   create_table "empleados", force: :cascade do |t|
@@ -34,15 +47,18 @@ ActiveRecord::Schema.define(version: 20160726005432) do
     t.string   "rut"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "sueldo"
+    t.text     "email"
+    t.string   "telefono"
+    t.text     "cargo"
   end
 
   create_table "productos", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "cantidad"
-    t.integer  "precio"
-    t.text     "descripcion"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string  "name"
+    t.integer "cantidad"
+    t.integer "precio"
+    t.text    "descripcion"
+    t.text    "unidadmedida"
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,4 +80,6 @@ ActiveRecord::Schema.define(version: 20160726005432) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "compras", "distribuidors"
+  add_foreign_key "compras", "productos"
 end

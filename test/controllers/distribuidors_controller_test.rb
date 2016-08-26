@@ -18,7 +18,7 @@ class DistribuidorsControllerTest < ActionController::TestCase
 
   test "should create distribuidor" do
     assert_difference('Distribuidor.count') do
-      post :create, distribuidor: { Descripcion: @distribuidor.Descripcion, Mail: @distribuidor.Mail, Nombre: @distribuidor.Nombre, Rut: @distribuidor.Rut, Telefono: @distribuidor.Telefono, Ubicacion: @distribuidor.Ubicacion, razonsocial: @distribuidor.razonsocial }
+      post :create, distribuidor: { Descripcion: @distribuidor.Descripcion, Mail: @distribuidor.Mail, Nombre: @distribuidor.Nombre, Rut: @distribuidor.Rut, Telefono: @distribuidor.Telefono, Ubicacion: @distribuidor.Ubicacion, productos: @distribuidor.productos, razonsocial: @distribuidor.razonsocial }
     end
 
     assert_redirected_to distribuidor_path(assigns(:distribuidor))
@@ -35,7 +35,7 @@ class DistribuidorsControllerTest < ActionController::TestCase
   end
 
   test "should update distribuidor" do
-    patch :update, id: @distribuidor, distribuidor: { Descripcion: @distribuidor.Descripcion, Mail: @distribuidor.Mail, Nombre: @distribuidor.Nombre, Rut: @distribuidor.Rut, Telefono: @distribuidor.Telefono, Ubicacion: @distribuidor.Ubicacion, razonsocial: @distribuidor.razonsocial }
+    patch :update, id: @distribuidor, distribuidor: { Descripcion: @distribuidor.Descripcion, Mail: @distribuidor.Mail, Nombre: @distribuidor.Nombre, Rut: @distribuidor.Rut, Telefono: @distribuidor.Telefono, Ubicacion: @distribuidor.Ubicacion, productos: @distribuidor.productos, razonsocial: @distribuidor.razonsocial }
     assert_redirected_to distribuidor_path(assigns(:distribuidor))
   end
 
