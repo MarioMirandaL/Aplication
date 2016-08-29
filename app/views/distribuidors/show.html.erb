@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <strong>Razonsocial:</strong>
+  <strong>Razon social:</strong>
   <%= @distribuidor.razonsocial %>
 </p>
 
@@ -40,5 +40,5 @@
   <%= @distribuidor.productos %>
 </p>
 
-<%= link_to 'Edit', edit_distribuidor_path(@distribuidor) %> |
-<%= link_to 'Back', distribuidors_path %>
+<%= link_to 'Editar', edit_distribuidor_path(@distribuidor), class:'btn btn-warning' %> 
+<%= link_to 'Atras', distribuidors_path, class:'btn btn-lg btn-info' %>

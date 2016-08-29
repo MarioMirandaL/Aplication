@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @empleado.name %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Edad:</strong>
   <%= @empleado.age %>
 </p>
 
@@ -35,5 +35,5 @@
   <%= @empleado.cargo %>
 </p>
 
-<%= link_to 'Edit', edit_empleado_path(@empleado) %> |
-<%= link_to 'Back', empleados_path %>
+<%= link_to 'Editar', edit_empleado_path(@empleado), class:'btn btn-warning'%> 
+<%= link_to 'Atras', empleados_path, class:'btn btn-lg btn-info'%>

@@ -1,4 +1,5 @@
 class DistribuidorsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_distribuidor, only: [:show, :edit, :update, :destroy]
 
   # GET /distribuidors
@@ -28,7 +29,7 @@ class DistribuidorsController < ApplicationController
 
     respond_to do |format|
       if @distribuidor.save
-        format.html { redirect_to @distribuidor, notice: 'Distribuidor was successfully created.' }
+        format.html { redirect_to @distribuidor, notice: 'El distribuidor a sido creado.' }
         format.json { render :show, status: :created, location: @distribuidor }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class DistribuidorsController < ApplicationController
   def update
     respond_to do |format|
       if @distribuidor.update(distribuidor_params)
-        format.html { redirect_to @distribuidor, notice: 'Distribuidor was successfully updated.' }
+        format.html { redirect_to @distribuidor, notice: 'El distribuidor a sido modificado.' }
         format.json { render :show, status: :ok, location: @distribuidor }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class DistribuidorsController < ApplicationController
   def destroy
     @distribuidor.destroy
     respond_to do |format|
-      format.html { redirect_to distribuidors_url, notice: 'Distribuidor was successfully destroyed.' }
+      format.html { redirect_to distribuidors_url, notice: 'El distribuidor a sido eliminado.' }
       format.json { head :no_content }
     end
   end

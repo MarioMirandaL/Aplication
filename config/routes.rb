@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
   
-  
-  resources :compras
-  resources :compras
-  resources :distribuidors
-  resources :distribuidors
+
   devise_for :users
    resources :users
    resources :home
    resources :distribuidors
    resources :productos
    resources :empleados
+   resources :compras
     root 'home#index'
   
   # The priority is based upon order of creation: first created -> highest priority.

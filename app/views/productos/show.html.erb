@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @producto.name %>
 </p>
 
@@ -25,5 +25,5 @@
   <%= @producto.unidadmedida %>
 </p>
 
-<%= link_to 'Edit', edit_producto_path(@producto) %> |
-<%= link_to 'Back', productos_path %>
+<%= link_to 'Editar', edit_producto_path(@producto), class:'btn btn-warning' %> 
+<%= link_to 'Atras', productos_path, class:'btn btn-lg btn-info'%>
