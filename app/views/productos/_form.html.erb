@@ -28,8 +28,12 @@
     <%= f.text_area :descripcion %>
   </div>
   <div class="field">
+    <% medidas = {
+      'kg'=> '1',
+      'lt'=> '2'
+      }%>
     <%= f.label :unidadmedida %><br>
-    <%= f.text_area :unidadmedida %>
+    <%= f.select :unidadmedida, medidas %>
   </div>
   <div class="actions">
     <%= f.submit %>
