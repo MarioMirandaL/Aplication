@@ -1,0 +1,25 @@
+<%= form_for(@producto_plato) do |f| %>
+  <% if @producto_plato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@producto_plato.errors.count, "error") %> prohibited this producto_plato from being saved:</h2>
+
+      <ul>
+      <% @producto_plato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :references %><br>
+    <%= f.text_field :references %>
+  </div>
+  <div class="field">
+    <%= f.label :references %><br>
+    <%= f.text_field :references %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

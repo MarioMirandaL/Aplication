@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total: 
+  iva: 
+  propina: 
+  fecha: 2016-09-23
+  references: 
+  subtotal: 
+  numdoc: 
+
+two:
+  total: 
+  iva: 
+  propina: 
+  fecha: 2016-09-23
+  references: 
+  subtotal: 
+  numdoc: 

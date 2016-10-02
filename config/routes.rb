@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   
 
+  resources :venta
+  resources :clientes
+  resources :plato_pedidos
+  resources :pedidos
+  resources :producto_platos
+  resources :platos
   devise_for :users
    resources :users
    resources :home

@@ -9,4 +9,6 @@ class Distribuidor < ActiveRecord::Base
 	validates :Ubicacion, :presence => {message: "No puede estar vacio"}
 	validates :Descripcion, :presence => {message: "No puede estar vacio"}
 	validates :productos, :presence => {message: "No puede estar vacio"}
+	has_many :compras
+	has_many :productos, trough :compras
 end

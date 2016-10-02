@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :producto_id %><br>
-    <%= f.text_field :producto_id %>
+    <%= select("Producto", "name", Producto.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'Seleccione'}) %>
   </div>
   <div class="field">
     <%= f.label :distribuidor_id %><br>
-    <%= f.text_field :distribuidor_id %>
+    <%= select("Distribuidor", "name", Distribuidor.all.collect {|p| [ p.Nombre, p.id ] }, {include_blank: 'Seleccione'}) %>
   </div>
   <div class="field">
     <%= f.label :fecha_compra %><br>

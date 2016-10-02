@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rut: MyString
+  mesa: 
+  fecha: 2016-09-23
+
+two:
+  rut: MyString
+  mesa: 
+  fecha: 2016-09-23

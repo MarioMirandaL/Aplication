@@ -1,0 +1,2 @@
+json.extract! producto_plato, :id, :references, :references, :created_at, :updated_at
+json.url producto_plato_url(producto_plato, format: :json)

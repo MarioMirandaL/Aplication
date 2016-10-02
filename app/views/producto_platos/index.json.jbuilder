@@ -1,0 +1,1 @@
+json.array! @producto_platos, partial: 'producto_platos/producto_plato', as: :producto_plato

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Plato Pedidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>References</th>
+      <th>Refenreces</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plato_pedidos.each do |plato_pedido| %>
+      <tr>
+        <td><%= plato_pedido.references %></td>
+        <td><%= plato_pedido.refenreces %></td>
+        <td><%= link_to 'Show', plato_pedido %></td>
+        <td><%= link_to 'Edit', edit_plato_pedido_path(plato_pedido) %></td>
+        <td><%= link_to 'Destroy', plato_pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plato pedido', new_plato_pedido_path %>
