@@ -18,7 +18,7 @@ class VentaControllerTest < ActionController::TestCase
 
   test "should create ventum" do
     assert_difference('Ventum.count') do
-      post :create, ventum: { fecha: @ventum.fecha, iva: @ventum.iva, numdoc: @ventum.numdoc, propina: @ventum.propina, references: @ventum.references, subtotal: @ventum.subtotal, total: @ventum.total }
+      post :create, ventum: { fecha: @ventum.fecha, iva: @ventum.iva, numdoc: @ventum.numdoc, pedido_id: @ventum.pedido_id, propina: @ventum.propina, subtotal: @ventum.subtotal, total: @ventum.total }
     end
 
     assert_redirected_to ventum_path(assigns(:ventum))
@@ -35,7 +35,7 @@ class VentaControllerTest < ActionController::TestCase
   end
 
   test "should update ventum" do
-    patch :update, id: @ventum, ventum: { fecha: @ventum.fecha, iva: @ventum.iva, numdoc: @ventum.numdoc, propina: @ventum.propina, references: @ventum.references, subtotal: @ventum.subtotal, total: @ventum.total }
+    patch :update, id: @ventum, ventum: { fecha: @ventum.fecha, iva: @ventum.iva, numdoc: @ventum.numdoc, pedido_id: @ventum.pedido_id, propina: @ventum.propina, subtotal: @ventum.subtotal, total: @ventum.total }
     assert_redirected_to ventum_path(assigns(:ventum))
   end
 

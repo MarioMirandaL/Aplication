@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  total: 
-  iva: 
-  propina: 
-  fecha: 2016-09-23
-  references: 
-  subtotal: 
-  numdoc: 
+  subtotal: 1
+  iva: 1
+  propina: 1
+  total: 1
+  fecha: 2016-10-02
+  numdoc: 1
+  pedido_id: 
 
 two:
-  total: 
-  iva: 
-  propina: 
-  fecha: 2016-09-23
-  references: 
-  subtotal: 
-  numdoc: 
+  subtotal: 1
+  iva: 1
+  propina: 1
+  total: 1
+  fecha: 2016-10-02
+  numdoc: 1
+  pedido_id: 

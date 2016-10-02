@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Total:</strong>
-  <%= @ventum.total %>
+  <strong>Subtotal:</strong>
+  <%= @ventum.subtotal %>
 </p>
 
 <p>
@@ -16,23 +16,23 @@
 </p>
 
 <p>
+  <strong>Total:</strong>
+  <%= @ventum.total %>
+</p>
+
+<p>
   <strong>Fecha:</strong>
   <%= @ventum.fecha %>
 </p>
 
 <p>
-  <strong>References:</strong>
-  <%= @ventum.references %>
-</p>
-
-<p>
-  <strong>Subtotal:</strong>
-  <%= @ventum.subtotal %>
-</p>
-
-<p>
   <strong>Numdoc:</strong>
   <%= @ventum.numdoc %>
+</p>
+
+<p>
+  <strong>Pedido:</strong>
+  <%= @ventum.pedido %>
 </p>
 
 <%= link_to 'Edit', edit_ventum_path(@ventum) %> |

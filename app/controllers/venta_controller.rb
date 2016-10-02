@@ -69,6 +69,6 @@ class VentaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ventum_params
-      params.require(:ventum).permit(:total, :iva, :propina, :fecha, :references, :subtotal, :numdoc)
+      params.require(:ventum).permit(:subtotal, :iva, :propina, :total, :fecha, :numdoc, :pedido_id)
     end
 end

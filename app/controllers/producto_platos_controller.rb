@@ -69,6 +69,6 @@ class ProductoPlatosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def producto_plato_params
-      params.require(:producto_plato).permit(:references, :references)
+      params.require(:producto_plato).permit(:producto_id, :plato_id)
     end
 end

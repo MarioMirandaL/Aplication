@@ -18,7 +18,7 @@ class PlatoPedidosControllerTest < ActionController::TestCase
 
   test "should create plato_pedido" do
     assert_difference('PlatoPedido.count') do
-      post :create, plato_pedido: { refenreces: @plato_pedido.refenreces, references: @plato_pedido.references }
+      post :create, plato_pedido: { pedidos_id: @plato_pedido.pedidos_id, plato_id: @plato_pedido.plato_id }
     end
 
     assert_redirected_to plato_pedido_path(assigns(:plato_pedido))
@@ -35,7 +35,7 @@ class PlatoPedidosControllerTest < ActionController::TestCase
   end
 
   test "should update plato_pedido" do
-    patch :update, id: @plato_pedido, plato_pedido: { refenreces: @plato_pedido.refenreces, references: @plato_pedido.references }
+    patch :update, id: @plato_pedido, plato_pedido: { pedidos_id: @plato_pedido.pedidos_id, plato_id: @plato_pedido.plato_id }
     assert_redirected_to plato_pedido_path(assigns(:plato_pedido))
   end
 

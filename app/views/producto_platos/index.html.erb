@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>References</th>
-      <th>References</th>
+      <th>Producto</th>
+      <th>Plato</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @producto_platos.each do |producto_plato| %>
       <tr>
-        <td><%= producto_plato.references %></td>
-        <td><%= producto_plato.references %></td>
+        <td><%= producto_plato.producto %></td>
+        <td><%= producto_plato.plato %></td>
         <td><%= link_to 'Show', producto_plato %></td>
         <td><%= link_to 'Edit', edit_producto_plato_path(producto_plato) %></td>
         <td><%= link_to 'Destroy', producto_plato, method: :delete, data: { confirm: 'Are you sure?' } %></td>

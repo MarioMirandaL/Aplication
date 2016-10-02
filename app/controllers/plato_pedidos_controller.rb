@@ -69,6 +69,6 @@ class PlatoPedidosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plato_pedido_params
-      params.require(:plato_pedido).permit(:references, :refenreces)
+      params.require(:plato_pedido).permit(:pedidos_id, :plato_id)
     end
 end
