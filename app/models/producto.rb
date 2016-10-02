@@ -6,7 +6,7 @@ class Producto < ActiveRecord::Base
 	validates_numericality_of :precio, :greater_than => 0
 	validates :unidadmedida, :presence => {message: "No puede estar vacio"}
 	has_many :compras
-	has_many :distribuidors, trough :compras
+	has_many :distribuidors, :through => :compras
 	#:if => :unidadmedida_validates
 	#def unidadmedida_validates
 	#	self.unidadmedida == "kg"

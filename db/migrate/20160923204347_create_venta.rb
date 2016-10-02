@@ -1,13 +1,13 @@
 class CreateVenta < ActiveRecord::Migration
   def change
     create_table :venta do |t|
-      t.int :total
-      t.int :iva
-      t.int :propina
+      t.integer :total
+      t.integer :iva
+      t.integer :propina
       t.date :fecha
-      t.pedido :references
-      t.int :subtotal
-      t.int :numdoc
+      t.references :pedido
+      t.integer :subtotal
+      t.integer :numdoc
 
       t.timestamps null: false
     end

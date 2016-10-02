@@ -2,7 +2,7 @@ class CreateClientes < ActiveRecord::Migration
   def change
     create_table :clientes do |t|
       t.string :nombre
-      t.int :telefono
+      t.integer :telefono
       t.date :fechanac
       t.text :observaciones
       t.string :rut
